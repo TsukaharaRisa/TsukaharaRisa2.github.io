@@ -27,13 +27,13 @@
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
   
     var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
-    var sphereMaterial1 = new THREE. MeshLamberMaterial( {color: 0x00ffff} );
-    var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial1 );
+    var sphereMaterial = new THREE. MeshLamberMaterial( {color: 0x00ffff} );
+    var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
     sphere1.position.set( -0.5, 0.5, -5 );
     scene.add( sphere1 );
  
-    var sphereMaterial2 = new THREE. MeshPhongMaterial( {color: 0x00ffff} );
-    var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial2 );
+    
+    var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
     sphere2.position.set( 0, 0.5, -5 );
     scene.add( sphere2 );
 
