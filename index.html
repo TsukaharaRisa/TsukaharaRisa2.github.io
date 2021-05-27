@@ -27,9 +27,9 @@
   
     var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
     var sphereMaterial = new THREE. MeshLamberMaterial( {color: 0x00ffff} );
-    var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
-    sphere1.position.set( 0.3, 0.3, -5 );
-    scene.add( sphere1 );
+    var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+    sphere.position.set( 0.3, 0.3, -5 );
+    scene.add( sphere );
 
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -47,8 +47,8 @@
     　requestAnimationFrame(update);
   
     　// 箱を回転させる
-    　sphere1.rotation.x += 0.01;
-    　sphere1.rotation.y += 0.01;
+    　sphere.rotation.x += 0.01;
+    　sphere.rotation.y += 0.01;
   
     　renderer.render(scene, camera);
   　};
