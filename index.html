@@ -24,12 +24,12 @@
     //カメラを作成
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
   
-    //箱を作成
-    var geometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-    var material1 = new THREE.MeshLambertMaterial({color: 0xff0000});
-    var box1 = new THREE.Mesh(geometry, material1);
-    box1.position.set(-0.8, 0.4, -4);
-    scene.add(box1);
+    //箱を作成var 
+    var torusGeometry = new THREE.TorusGeometry( 0.5, 0.2, 6, 12 );
+    var torusMaterial = new THREE. MeshPhongMaterial( { color: 0x0000ff } );
+    var torus = new THREE.Mesh( torusGeometry, torusMaterial );
+    torus.position.set( 0, 0, -5);
+    scene.add( torus );
     //
     var material2 = new THREE.MeshPhongMaterial({color: 0x00ff00});
     var box2 = new THREE.Mesh(geometry, material2);
@@ -76,8 +76,8 @@
       requestAnimationFrame(update);
   
       //箱を回転させる
-      box1.rotation.x += 0.01;
-      box1.rotation.y += 0.01;
+      torus.rotation.x += 0.01;
+      torus.rotation.y += 0.01;
       box2.rotation.x += 0.01;
       box2.rotation.y += 0.01;
       box3.rotation.x += 0.01;
