@@ -58,12 +58,12 @@
 
     //平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
-    directionalLight1.position.set(1, 1, 1);
+    directionalLight1.position.set(1, 1, -4);
     scene.add(directionalLight1);
    
     //平行光源2
     var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-    directionalLight2.position.set(-1, 1, 1);
+    directionalLight2.position.set(-1, 1, -4);
     scene.add(directionalLight2);
    
     //点光源
@@ -75,7 +75,19 @@
     var update = function() {
       requestAnimationFrame(update);
   
-    
+      //箱を回転させる
+      box1.rotation.x += 0.01;
+      box1.rotation.y += 0.01;
+      box2.rotation.x += 0.01;
+      box2.rotation.y += 0.01;
+      box3.rotation.x += 0.01;
+      box3.rotation.y += 0.01;
+      box4.rotation.x += 0.01;
+      box4.rotation.y += 0.01;
+      box5.rotation.x += 0.01;
+      box5.rotation.y += 0.01;
+      box6.rotation.x += 0.01;
+      box6.rotation.y += 0.01;
 
       renderer.render(scene, camera);
     };
